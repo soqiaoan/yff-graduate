@@ -1,0 +1,30 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './base.scss';
+
+html,
+body #app {
+  color: #333333;
+  font-family: Arial, Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, sans-serif;
+  background-color: $background-color;
+  font-size: 14px;
+}
+
+a{
+  color: $primary-color;
+}
+
+.page-body{
+  min-height: 100vh;
+  &.with-navbar{
+    min-height: calc(100vh - 46px);
+
+    &.with-tabbar{
+      min-height: calc(100vh - 46px - 50px);
+    }
+  }
+
+  &.with-tabbar{
+    min-height: calc(100vh - 50px);
+  }
+}
